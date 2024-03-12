@@ -11,5 +11,5 @@ import { SharedModule } from '../../../shared/shared.module';
   styleUrl: './todo-list.component.scss'
 })
 export class TodoListComponent {
-  todos = Array.from({ length: 10 }, (_, i) => `Todo no. ${i+1}`);
+  todos = Array.from({ length: 5 }, (_, i) => `Todo no. ${i + 1}`);
 }
