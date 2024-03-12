@@ -1,0 +1,1 @@
+Template Project for Basic Angular Applications
