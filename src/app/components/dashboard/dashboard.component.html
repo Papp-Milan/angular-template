@@ -1,0 +1,26 @@
+<div class="container">
+  <mat-toolbar color="primary" class="toolbar">
+    <button mat-icon-button (click)="goHome()">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>{{title}}</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav">
+    <mat-sidenav #snav mode="side" opened>
+      <mat-nav-list>
+        @for(item of items; track item) {
+        <div>
+          <button mat-icon-button (click)="redirect(item)"><mat-icon>{{item.icon}}</mat-icon></button>
+        </div>
+        }
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
