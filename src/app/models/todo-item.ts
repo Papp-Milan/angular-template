@@ -5,7 +5,7 @@ export class TodoItem {
 
     constructor(priority: string, description: string, status: string) {
         this.priority = priority;
-        this.status = status;
         this.description = description;
+        this.status = status;
     }
 }
